@@ -1,0 +1,12 @@
+body {
+  font-family: "Verdana";
+  background: #212121;
+  color: #8e8e8e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

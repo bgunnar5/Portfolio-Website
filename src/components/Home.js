@@ -25,29 +25,29 @@ export default Home;
 
 const Intro = styled.h3`
   color: #7bafd4;
-  font-size: 25px;
+  font-size: 35px;
   margin: 3px;
 `;
 
 const Name = styled.h1`
   color: #ffffff;
-  font-size: 50px;
+  font-size: 70px;
   margin: 10px 0;
 `;
 
 const Description = styled.p`
-  font-size: 25px;
+  font-size: 35px;
   margin: 3px;
 `;
 
 const Picture = styled.img`
-  padding: 40px 40px 25px 5px;
+  padding: 80px 80px 25px 5px;
 `;
 
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px 5px 25px 40px;
+  padding: 80px 5px 25px 80px;
 `;
 
 const Wrapper = styled.div`

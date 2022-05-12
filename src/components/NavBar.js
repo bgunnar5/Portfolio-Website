@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import MenuItem from "./MenuItem";
 import HomeImg from "../imgs/home.svg";
 import HomeActiveImg from "../imgs/blue-home.svg";
@@ -16,7 +16,7 @@ import SignatureImg from "../imgs/website-signature.svg";
 
 const NavBar = () => {
   const location = useLocation();
-  const active = location.pathname;
+  const active = location.hash;
   return (
     <>
       <Nav>
@@ -24,38 +24,38 @@ const NavBar = () => {
           <Signature src={SignatureImg} />
           <Placeholder></Placeholder>
           <MenuItem
-            to="/"
+            to="#home"
             label="Home"
-            active={active === "/"}
+            active={active === "#home"}
             img={HomeImg}
             activeImg={HomeActiveImg}
           />
           <MenuItem
-            to="/about"
+            to="#about"
             label="About"
-            active={active === "/about"}
+            active={active === "#about"}
             test={true}
             img={AboutImg}
             activeImg={AboutActiveImg}
           />
           <MenuItem
-            to="/experience"
+            to="#experience"
             label="Experience"
-            active={active === "/experience"}
+            active={active === "#experience"}
             img={ExperienceImg}
             activeImg={ExperienceActiveImg}
           />
           <MenuItem
-            to="/education"
+            to="#education"
             label="Education"
-            active={active === "/education"}
+            active={active === "#education"}
             img={EducationImg}
             activeImg={EducationActiveImg}
           />
           <MenuItem
-            to="/contact"
+            to="#contact"
             label="Contact"
-            active={active === "/contact"}
+            active={active === "#contact"}
             img={ContactImg}
             activeImg={ContactActiveImg}
           />
@@ -73,7 +73,13 @@ const Wrapper = styled.ul`
   margin: 0;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  border-bottom: solid 1px;
+  background-color: #212121;
+  width: 100%;
+  position: fixed;
+  top: 0;
+`;
 
 const Signature = styled.img`
   margin: 12px 6px;

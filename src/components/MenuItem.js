@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 const MenuItem = ({ img, label, to, active, activeImg }) => {
   return (
     <Item active={active} data-testid={"menu-item-" + label}>
-      <Link to={to} style={{ textDecoration: "none" }}>
+      <HashLink to={to} smooth style={{ textDecoration: "none" }}>
         <Icon src={active ? activeImg : img} />
         <Label active={active}>{label}</Label>
-      </Link>
+      </HashLink>
     </Item>
   );
 };

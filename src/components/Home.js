@@ -5,7 +5,7 @@ import ProfilePic from "../imgs/profile-pic-home.svg";
 const Home = () => {
   return (
     <>
-      <Wrapper>
+      <HomeSection id="home">
         <TextWrapper>
           <Intro>Hi, I'm</Intro>
           <Name>Brian Gunnarson</Name>
@@ -16,7 +16,7 @@ const Home = () => {
           </Description>
         </TextWrapper>
         <Picture src={ProfilePic}></Picture>
-      </Wrapper>
+      </HomeSection>
     </>
   );
 };
@@ -50,7 +50,8 @@ const TextWrapper = styled.div`
   padding: 80px 5px 25px 80px;
 `;
 
-const Wrapper = styled.div`
+const HomeSection = styled.section`
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 `;

@@ -6,7 +6,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-padding-top: 104px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 60px;
+  margin: 3px;
+}
+
+.text {
+  font-size: 35px;
+}
+
+.left-padding {
+  padding: 80px 5px 25px 140px;
+}
+
+.right-padding{
+  padding: 80px 140px 25px 5px;
 }

@@ -20,10 +20,10 @@ const Experience = () => {
         title="Full Stack Developer"
         dates="Feb. 2021 - Sep. 2021"
         description="A message board for course instructors and students to post questions, provide answers, connect, 
-      and communicate. We built Inquire as an intuitive tool to aid professors with classroom discussion 
+      and communicate. My colleagues and I built Inquire as an intuitive tool to aid professors with classroom discussion 
       and incentivize productive interaction amongst peers."
         bullets={[
-          "Helped teach Python and C basics, OOP, and data structures to students",
+          "Integrated backend resources with the Flask framework to communicate with our frontend API and store data in our MongoDB database",
           "Created frontend components using React",
           "Maintained a RESTful API to help implement CRUD operations",
           "Worked with a team of 4 other software engineers",
@@ -45,7 +45,7 @@ const Experience = () => {
       dates="Sep. 2020 - Mar. 2022"
       description="At the University of Oregon, I helped instruct three introductory computer science classes: CIS 210, CIS 211, and CIS 212. 
       The topics of these classes included programming basics (conditionals, loops, etc.), object oriented programming, and data structures."
-      bullets={["Integrated backend resources with the Flask framework to communicate with our frontend API and store data in our MongoDB database", "Increased my ability to review, understand, and develop code"]}
+      bullets={["Helped teach Python and C basics, OOP, and data structures to students", "Increased my ability to review, understand, and develop code"]}
     />
 
     <Job 

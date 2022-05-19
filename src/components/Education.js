@@ -10,5 +10,5 @@ const Education = () => (
 export default Education;
 
 const EducationSection = styled.section`
-  padding-top: 1000px;
+  min-height: 100vh;
 `;

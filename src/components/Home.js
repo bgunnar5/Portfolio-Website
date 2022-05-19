@@ -5,7 +5,7 @@ import ProfilePic from "../imgs/profile-pic-home.svg";
 const Home = () => {
   return (
     <>
-      <HomeSection id="home">
+      <HomeSection className="section" id="home">
         <TextWrapper className="left-padding">
           <Intro>Hi, I'm</Intro>
           <Name className="title">Brian Gunnarson</Name>
@@ -53,5 +53,5 @@ const HomeSection = styled.section`
   align-items: center;
   margin: auto;
   min-height: 100vh;
-  max-width: 2000px;
+  /* max-width: 2000px; */
 `;

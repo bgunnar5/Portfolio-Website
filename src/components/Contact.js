@@ -9,4 +9,6 @@ const Contact = () => (
 
 export default Contact;
 
-const ContactSection = styled.section``;
+const ContactSection = styled.section`
+  min-height: 100vh;
+`;

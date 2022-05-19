@@ -22,7 +22,7 @@ code {
 }
 
 .text {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .left-padding {
@@ -31,4 +31,21 @@ code {
 
 .right-padding{
   padding: 80px 140px 25px 5px;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  max-width: 2124px;
+}
+
+a:link {
+  color: #7BAFD4;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7BAFD4;
+  text-decoration: none;
 }

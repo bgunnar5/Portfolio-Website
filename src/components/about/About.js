@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar";
 
 const About = () => (
   
-  <AboutSection id="about">
+  <AboutSection className="section" id="about">
     <Top>
       <Picture src={AboutPic} className="left-padding"></Picture>
       <DescriptionDiv className="right-padding">
@@ -50,6 +50,7 @@ const AboutSection = styled.section`
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  padding-top: 0px;
 `;
 
 const Top = styled.div`
@@ -65,15 +66,13 @@ const DescriptionDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin: 3rem;
-  max-width: 1400px;
 `;
 
 const Skills = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 70%;
-  /* padding-top: 100px; */
+  width: 80%;
   margin-top: 5rem;
 `;
 

@@ -21,43 +21,44 @@ const NavBar = () => {
       <Nav>
         <Wrapper>
           <Signature src={SignatureImg} />
-          <Placeholder></Placeholder>
-          <MenuItem
-            to="#home"
-            label="Home"
-            // active={active === "#home"}
-            img={HomeImg}
-            // activeImg={HomeActiveImg}
-          />
-          <MenuItem
-            to="#about"
-            label="About"
-            // active={active === "#about"}
-            test={true}
-            img={AboutImg}
-            // activeImg={AboutActiveImg}
-          />
-          <MenuItem
-            to="#experience"
-            label="Experience"
-            // active={active === "#experience"}
-            img={ExperienceImg}
-            // activeImg={ExperienceActiveImg}
-          />
-          <MenuItem
-            to="#education"
-            label="Education"
-            // active={active === "#education"}
-            img={EducationImg}
-            // activeImg={EducationActiveImg}
-          />
-          <MenuItem
-            to="#contact"
-            label="Contact"
-            // active={active === "#contact"}
-            img={ContactImg}
-            // activeImg={ContactActiveImg}
-          />
+          <MenuButtons>
+            <MenuItem
+              to="#home"
+              label="Home"
+              // active={active === "#home"}
+              img={HomeImg}
+              // activeImg={HomeActiveImg}
+            />
+            <MenuItem
+              to="#about"
+              label="About"
+              // active={active === "#about"}
+              test={true}
+              img={AboutImg}
+              // activeImg={AboutActiveImg}
+            />
+            <MenuItem
+              to="#experience"
+              label="Experience"
+              // active={active === "#experience"}
+              img={ExperienceImg}
+              // activeImg={ExperienceActiveImg}
+            />
+            <MenuItem
+              to="#education"
+              label="Education"
+              // active={active === "#education"}
+              img={EducationImg}
+              // activeImg={EducationActiveImg}
+            />
+            <MenuItem
+              to="#contact"
+              label="Contact"
+              // active={active === "#contact"}
+              img={ContactImg}
+              // activeImg={ContactActiveImg}
+            />
+          </MenuButtons>
         </Wrapper>
       </Nav>
   );
@@ -86,6 +87,8 @@ const Signature = styled.img`
   width: 120px;
 `;
 
-const Placeholder = styled.div`
-  flex: 1;
+const MenuButtons = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-right: 1rem;
 `;

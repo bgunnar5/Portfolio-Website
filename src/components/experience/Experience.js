@@ -8,24 +8,36 @@ import Job from "./Job";
 
 const Experience = () => {
   return (
-  <ExperienceSection className="section" id="experience">
-    <h1 className="title" style={{alignSelf: "center"}}>Projects {"&"} Work Experience</h1>
+    <ExperienceSection className="section" id="experience">
+      <h1 className="title" style={{ alignSelf: "center" }}>
+        Projects {"&"} Work Experience
+      </h1>
 
-    <Job 
-      logo={InquireLogo}
-      company="Inquire"
-      type="Personal Project"
-      title="Full Stack Developer"
-      dates="Feb. 2021 - Sep. 2021"
-      description="A message board for course instructors and students to post questions, provide answers, connect, 
+      <Job
+        logo={InquireLogo}
+        company="Inquire"
+        type="Personal Project"
+        title="Full Stack Developer"
+        dates="Feb. 2021 - Sep. 2021"
+        description="A message board for course instructors and students to post questions, provide answers, connect, 
       and communicate. We built Inquire as an intuitive tool to aid professors with classroom discussion 
       and incentivize productive interaction amongst peers."
-      bullets={["Helped teach Python and C basics, OOP, and data structures to students",
-       "Created frontend components using React", "Maintained a RESTful API to help implement CRUD operations", "Worked with a team of 4 other software engineers"]}
-      links={[{"link": "https://inquiremb.com", "message": "Visit the site"}, {"link": "https://github.com/5-Bits-in-a-Byte/inquiremb", "message": "Open in GitHub"}]}
-    />
+        bullets={[
+          "Helped teach Python and C basics, OOP, and data structures to students",
+          "Created frontend components using React",
+          "Maintained a RESTful API to help implement CRUD operations",
+          "Worked with a team of 4 other software engineers",
+        ]}
+        links={[
+          { link: "https://inquiremb.com", message: "Visit the site" },
+          {
+            link: "https://github.com/5-Bits-in-a-Byte/inquiremb",
+            message: "Open in GitHub",
+          },
+        ]}
+      />
 
-    <Job 
+      <Job 
       logo={UOLogo}
       company="University of Oregon"
       type="Work Experience"
@@ -61,9 +73,9 @@ const Experience = () => {
       bullets={["Created the visualization component using Python frameworks", "Worked alongside my colleague to construct a transformation tree capable of evaluating multiple execution pipelines for a given time series"]}
       links={[{"link": "https://github.com/bgunnar5/TimeSeries", "message": "Open in GitHub"}]}
     />
-    
-  </ExperienceSection>
-)};
+    </ExperienceSection>
+  );
+};
 
 export default Experience;
 
@@ -72,6 +84,6 @@ const ExperienceSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding-top: 25px;
 `;

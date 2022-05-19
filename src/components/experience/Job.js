@@ -1,47 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ExternalLink from "../../imgs/external-link.svg";
+import UpArrow from "../../imgs/dropdown-up.svg";
+import DownArrow from "../../imgs/dropdown-down.svg";
+import AnimateHeight from "react-animate-height";
 
-const Job = ({logo, company, type, title, dates, description, bullets, links}) => {
-    return (
+const Job = ({
+  logo,
+  company,
+  type,
+  title,
+  dates,
+  description,
+  bullets,
+  links,
+}) => {
+  const [height, toggleHeight] = useState(0);
+
+  const handleHeightChange = (e) => {
+    var newHeight = (height === 0 ? "auto": 0);
+    toggleHeight(newHeight);
+    e.stopPropagation()
+  }
+
+  return (
     <JobWrapper>
-    <HeaderSection>
-      <Image src={logo} alt={company + " Logo"} />
-      <CompanyContainer>
-        <CompanyName>{company}</CompanyName>
-        <CompanyType className="text">({type})</CompanyType>
-      </CompanyContainer>
-    </HeaderSection>
-    <TitleSection>
-      <LeftContainer>
-        <Dot />
-      </LeftContainer>
-      <JobTitle>{title}, <em>{dates}</em></JobTitle>
-    </TitleSection>
-    <DescriptionSection>
-      <LineContainer>
-        <Line />
-      </LineContainer>
-      <JobDescription className="text">
-        <p>{description}</p>
-        <p>
-          Duties:
-          <BulletPoints>
-            {bullets.map(duty => (
-                <li>{duty}</li>
-            ))}
-          </BulletPoints>
-        </p>
-        {links ? links.map(link => (
-            <LinkGroup>
-                <LinkTag href={link.link} target="_blank">{link.message}</LinkTag>
-                <LinkImg src={ExternalLink} alt="External Link Logo"/>
-            </LinkGroup>
-        )) : <></>}
-      </JobDescription>
-    </DescriptionSection>
-  </JobWrapper>
-)};
+      <HeaderSection
+        onClick={handleHeightChange}
+      >
+        <Image src={logo} alt={company + " Logo"} />
+        <CompanyContainer>
+          <CompanyName>{company}</CompanyName>
+          <CompanyType className="text">({type})</CompanyType>
+        </CompanyContainer>
+        {height === 0 ? (
+          <DropArrow src={UpArrow} />
+        ) : (
+          <DropArrow src={DownArrow} />
+        )}
+      </HeaderSection>
+        <AnimateHeight duration={500} height={height} >
+          <TitleSection>
+            <LeftContainer>
+              <Dot />
+            </LeftContainer>
+            <JobTitle>
+              {title}, <em>{dates}</em>
+            </JobTitle>
+          </TitleSection>
+          <DescriptionSection>
+            <LineContainer>
+              <Line />
+            </LineContainer>
+            <JobDescription className="text">
+              <p>{description}</p>
+              <p>
+                Duties:
+                <BulletPoints>
+                  {bullets.map((duty) => (
+                    <li>{duty}</li>
+                  ))}
+                </BulletPoints>
+              </p>
+              {links ? (
+                links.map((link) => (
+                  <LinkGroup>
+                    <LinkTag href={link.link} target="_blank">
+                      {link.message}
+                    </LinkTag>
+                    <LinkImg src={ExternalLink} alt="External Link Logo" />
+                  </LinkGroup>
+                ))
+              ) : (
+                <></>
+              )}
+            </JobDescription>
+          </DescriptionSection>
+        </AnimateHeight>
+    </JobWrapper>
+  );
+};
 
 export default Job;
 
@@ -49,13 +87,18 @@ const JobWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
 `;
 
 const HeaderSection = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Image = styled.img`
@@ -64,9 +107,15 @@ const Image = styled.img`
 `;
 
 const CompanyContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+`;
+
+const DropArrow = styled.img`
+  margin-left: auto;
+  width: 4rem;
+  height: 4rem;
 `;
 
 const CompanyName = styled.h2`
@@ -78,8 +127,8 @@ const CompanyName = styled.h2`
 `;
 
 const CompanyType = styled.p`
-    /* padding-top: 0px; */
-    margin-top: 0px;
+  /* padding-top: 0px; */
+  margin-top: 0px;
 `;
 
 const TitleSection = styled.div`
@@ -97,7 +146,7 @@ const LeftContainer = styled.div`
 const Dot = styled.div`
   height: 20px;
   width: 20px;
-  background-color: #8E8E8E;
+  background-color: #8e8e8e;
   border-radius: 50%;
 `;
 
@@ -121,7 +170,7 @@ const LineContainer = styled.div`
 const Line = styled.div`
   width: 3px;
   height: 100%;
-  background-color: #8E8E8E;
+  background-color: #8e8e8e;
 `;
 
 const JobDescription = styled.div`
@@ -143,4 +192,12 @@ const LinkImg = styled.img`
 
 const LinkTag = styled.a`
   margin-right: 1rem;
+`;
+
+const CollapsableSection = styled.div`
+  transition: all 0.5s ease 0s;
+
+  &:before {
+    transition: .3s;
+  }
 `;

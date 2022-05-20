@@ -13,7 +13,7 @@ const About = () => (
       <DescriptionDiv className="right-padding">
         <h1 className="title">About Me</h1>
         <p className="text">
-          I’m a great programmer, enthusiastic teacher, and most of all a team player. 
+          I’m an exceptional programmer, enthusiastic teacher, and most of all a team player. 
           I’m a recent college grad out of the University of Oregon and one of the founders of Inquire. 
           I find joy in software engineering and exploring new places. I’ve never shied away from a challenge 
           and am more than willing to learn from my mistakes. If you’re interested in getting to know me, then...

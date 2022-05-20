@@ -14,7 +14,7 @@ function App() {
       <Home />
       <About />
       <Experience />
-      <Education />
+      {/* <Education /> */}
       <Contact />
     </BrowserRouter>
   );

@@ -13,6 +13,7 @@ import EducationActiveImg from "../../imgs/blue-education.svg";
 import ContactImg from "../../imgs/contact.svg";
 import ContactActiveImg from "../../imgs/blue-contact.svg";
 import SignatureImg from "../../imgs/website-signature.svg";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   // const location = useLocation();
@@ -20,15 +21,17 @@ const NavBar = () => {
   return (
       <Nav>
         <Wrapper>
-          <Signature src={SignatureImg} />
+          <HashLink to="#home" smooth>
+            <Signature src={SignatureImg} />
+          </HashLink>
           <MenuButtons>
-            <MenuItem
+            {/* <MenuItem
               to="#home"
               label="Home"
               // active={active === "#home"}
               img={HomeImg}
               // activeImg={HomeActiveImg}
-            />
+            /> */}
             <MenuItem
               to="#about"
               label="About"
@@ -44,13 +47,13 @@ const NavBar = () => {
               img={ExperienceImg}
               // activeImg={ExperienceActiveImg}
             />
-            <MenuItem
+            {/* <MenuItem
               to="#education"
               label="Education"
               // active={active === "#education"}
               img={EducationImg}
               // activeImg={EducationActiveImg}
-            />
+            /> */}
             <MenuItem
               to="#contact"
               label="Contact"
@@ -69,7 +72,7 @@ export default NavBar;
 const Wrapper = styled.ul`
   /* small change */
   display: flex;
-  margin: 0;
+  margin: auto;
 `;
 
 const Nav = styled.nav`

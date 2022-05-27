@@ -1,23 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 import MenuItem from "./MenuItem";
-import HomeImg from "../../imgs/home.svg";
-import HomeActiveImg from "../../imgs/blue-home.svg";
 import AboutImg from "../../imgs/about.svg";
-import AboutActiveImg from "../../imgs/blue-about.svg";
 import ExperienceImg from "../../imgs/experience.svg";
-import ExperienceActiveImg from "../../imgs/blue-experience.svg";
 import EducationImg from "../../imgs/education.svg";
-import EducationActiveImg from "../../imgs/blue-education.svg";
 import ContactImg from "../../imgs/contact.svg";
-import ContactActiveImg from "../../imgs/blue-contact.svg";
 import SignatureImg from "../../imgs/website-signature.svg";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
-  // const location = useLocation();
-  // const active = location.hash;
   return (
       <Nav>
         <Wrapper>
@@ -25,41 +16,26 @@ const NavBar = () => {
             <Signature src={SignatureImg} />
           </HashLink>
           <MenuButtons>
-            {/* <MenuItem
-              to="#home"
-              label="Home"
-              // active={active === "#home"}
-              img={HomeImg}
-              // activeImg={HomeActiveImg}
-            /> */}
             <MenuItem
               to="#about"
               label="About"
-              // active={active === "#about"}
               test={true}
               img={AboutImg}
-              // activeImg={AboutActiveImg}
             />
             <MenuItem
               to="#experience"
               label="Experience"
-              // active={active === "#experience"}
               img={ExperienceImg}
-              // activeImg={ExperienceActiveImg}
             />
             {/* <MenuItem
               to="#education"
               label="Education"
-              // active={active === "#education"}
               img={EducationImg}
-              // activeImg={EducationActiveImg}
             /> */}
             <MenuItem
               to="#contact"
               label="Contact"
-              // active={active === "#contact"}
               img={ContactImg}
-              // activeImg={ContactActiveImg}
             />
           </MenuButtons>
         </Wrapper>

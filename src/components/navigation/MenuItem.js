@@ -2,12 +2,12 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
-const MenuItem = ({ img, label, to, active, activeImg }) => {
+const MenuItem = ({ img, label, to, }) => {
   return (
-    <Item active={active} data-testid={"menu-item-" + label}>
+    <Item data-testid={"menu-item-" + label}>
       <HashLink to={to} smooth style={{ textDecoration: "none" }}>
-        <Icon src={active ? activeImg : img} />
-        <Label active={active}>{label}</Label>
+        <Icon src={img} />
+        <Label>{label}</Label>
       </HashLink>
     </Item>
   );

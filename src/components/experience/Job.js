@@ -89,7 +89,6 @@ const JobWrapper = styled.div`
   align-items: left;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
 `;
 
 const HeaderSection = styled.div`
@@ -99,6 +98,7 @@ const HeaderSection = styled.div`
   &:hover {
     cursor: pointer;
   }
+  border-bottom: 1px solid white;
 `;
 
 const Image = styled.img`
@@ -192,12 +192,4 @@ const LinkImg = styled.img`
 
 const LinkTag = styled.a`
   margin-right: 1rem;
-`;
-
-const CollapsableSection = styled.div`
-  transition: all 0.5s ease 0s;
-
-  &:before {
-    transition: .3s;
-  }
 `;

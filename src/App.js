@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Education from "./components/Education";
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact";
 import NavBar from "./components/navigation/NavBar";
 
 function App() {

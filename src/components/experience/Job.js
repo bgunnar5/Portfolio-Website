@@ -64,8 +64,8 @@ const Job = ({
               </p>
               {links ? (
                 links.map((link) => (
-                  <LinkGroup>
-                    <LinkTag href={link.link} target="_blank">
+                  <LinkGroup  href={link.link} target="_blank">
+                    <LinkTag>
                       {link.message}
                     </LinkTag>
                     <LinkImg src={ExternalLink} alt="External Link Logo" />
@@ -181,7 +181,7 @@ const BulletPoints = styled.ul`
   margin-top: auto;
 `;
 
-const LinkGroup = styled.div`
+const LinkGroup = styled.a`
   display: flex;
   align-items: center;
 `;
@@ -190,6 +190,6 @@ const LinkImg = styled.img`
   width: 35px;
 `;
 
-const LinkTag = styled.a`
+const LinkTag = styled.div`
   margin-right: 1rem;
 `;

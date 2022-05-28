@@ -13,10 +13,19 @@ const About = () => (
       <DescriptionDiv className="right-padding">
         <h1 className="title">About Me</h1>
         <p className="text">
-          I’m an exceptional programmer, enthusiastic teacher, and most of all a team player. 
+          I'm a software engineer from Eugene, OR who enjoys problem solving, teaching, and learning. 
+          I have a Bachelor of Science in Computer Information Science from the University of Oregon and 
+          am one of the founders of Inquire: a website you can learn more about in the experience section below.
+          {/* I’m an exceptional programmer, enthusiastic teacher, and most of all a team player. 
           I’m a recent college grad out of the University of Oregon and one of the founders of Inquire. 
           I find joy in software engineering and exploring new places. I’ve never shied away from a challenge 
-          and am more than willing to learn from my mistakes. If you’re interested in getting to know me, then...
+          and am more than willing to learn from my mistakes. If you’re interested in getting to know me, then... */}
+        </p>
+        <p className="text" style={{marginTop: "0px"}}>
+          Outside of software engineering, I love hiking and exploring new places. I've traveled all over the Pacific
+          Northwest visiting various hiking trails, beaches, and mountains. The picture on the left is from a trip I
+          took to Blue Pool in Oregon. If you're interested in getting to know me more or have any suggestions on places
+          I should visit, then...
         </p>
         <HashLink to={"#contact"} smooth>
           <Button label="Say Hello" buttonWidth={"200px"} buttonHeight={"50px"}/>

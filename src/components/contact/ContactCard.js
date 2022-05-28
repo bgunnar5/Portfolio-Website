@@ -42,4 +42,5 @@ const Logo = styled.img`
 
 const Description = styled.p`
     color: white;
+    font-size: 20px;
 `;

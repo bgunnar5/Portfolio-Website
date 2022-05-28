@@ -37,6 +37,8 @@ const NavBar = () => {
               label="Contact"
               img={ContactImg}
             />
+            {/* <MenuItem to="/brian-gunnarson-resume.pdf" label="Resume" img={ContactImg} /> */}
+            <a href="./brian-gunnarson-resume.pdf" target="_blank">Resume</a>
           </MenuButtons>
         </Wrapper>
       </Nav>

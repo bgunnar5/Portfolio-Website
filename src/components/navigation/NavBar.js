@@ -5,8 +5,10 @@ import AboutImg from "../../imgs/about.svg";
 import ExperienceImg from "../../imgs/experience.svg";
 import EducationImg from "../../imgs/education.svg";
 import ContactImg from "../../imgs/contact.svg";
+import ResumeImg from "../../imgs/resume.svg";
 import SignatureImg from "../../imgs/website-signature.svg";
 import { HashLink } from "react-router-hash-link";
+import PDF from "../../static/brian-gunnarson-resume.pdf";
 
 const NavBar = () => {
   return (
@@ -37,8 +39,13 @@ const NavBar = () => {
               label="Contact"
               img={ContactImg}
             />
-            {/* <MenuItem to="/brian-gunnarson-resume.pdf" label="Resume" img={ContactImg} /> */}
-            <a href="./brian-gunnarson-resume.pdf" target="_blank">Resume</a>
+            <MenuItem
+              to={PDF}
+              label="Resume"
+              img={ResumeImg}
+              color
+              blank
+            />
           </MenuButtons>
         </Wrapper>
       </Nav>

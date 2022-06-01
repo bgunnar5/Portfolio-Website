@@ -2,13 +2,25 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
-const MenuItem = ({ img, label, to, }) => {
+const MenuItem = ({ img, label, to, color, blank }) => {
   return (
     <Item data-testid={"menu-item-" + label}>
-      <HashLink to={to} smooth style={{ textDecoration: "none" }}>
-        <Icon src={img} />
-        <Label>{label}</Label>
-      </HashLink>
+      {blank ? (
+        <HashLink
+          to={to}
+          target="_blank"
+          smooth
+          style={{ textDecoration: "none" }}
+        >
+          <Icon src={img} />
+          <Label color={color}>{label}</Label>
+        </HashLink>
+      ) : (
+        <HashLink to={to} smooth style={{ textDecoration: "none" }}>
+          <Icon src={img} />
+          <Label color={color}>{label}</Label>
+        </HashLink>
+      )}
     </Item>
   );
 };
@@ -16,9 +28,11 @@ const MenuItem = ({ img, label, to, }) => {
 export default MenuItem;
 
 const Item = styled.li`
+  display: flex;
+  align-items: center;
   list-style-type: none;
-  margin: 12px 6px;
   text-align: center;
+  margin: 12px 6px;
   padding: 3px;
   :hover {
     opacity: 70%;
@@ -31,7 +45,7 @@ const Icon = styled.img`
 `;
 
 const Label = styled.p`
-  color: ${(props) => (props.active ? "#7bafd4" : "#ffffff")};
+  color: ${(props) => (props.color ? "#7bafd4" : "#ffffff")};
   font-size: 20px;
   font-weight: bold;
   margin: 0 10px;

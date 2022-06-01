@@ -1,6 +1,5 @@
 body {
   font-family: "Verdana";
-  /* background: #212121; */
   background: repeating-linear-gradient(-45deg, #292929, #292929 30px, #212121 30px, #212121 500px);
   background-attachment: fixed;
   color: #8e8e8e;

@@ -21,23 +21,25 @@ const ProgressBar = ({percent, label, bluePath}) => {
                     fill: "white"
                 }
             }} />
-        <Label>{label}</Label>
+        <Label className="text">{label}</Label>
     </Wrapper>
 )};
 
 export default ProgressBar;
 
-/*
-#7BAFD4 -> hsv(205,42,83)
-#8E8E8E -> hsv(0,0,56)
-*/
-
 const Wrapper = styled.div`
     margin: auto;
-`;
+
+    @media (min-width: 741px) and (max-width: 1800px) {
+        width: 210px;
+    }
+
+    @media (max-width: 740px) {
+        width: 150px;
+    }
+`; 
 
 const Label = styled.p`
     color: white;
-    font-size: 30px;
     margin-top: 10px;
 `;

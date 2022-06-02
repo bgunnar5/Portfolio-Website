@@ -63,8 +63,8 @@ const Picture = styled.img`
   }
 
   @media (max-width: 740px) {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     padding-bottom: 10px;
   }
 `;

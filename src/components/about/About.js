@@ -16,10 +16,6 @@ const About = () => (
           I'm a software engineer from Eugene, OR who enjoys problem solving, teaching, and learning. 
           I have a Bachelor of Science in Computer Information Science from the University of Oregon and 
           am one of the founders of Inquire: a website you can learn more about in the experience section below.
-          {/* I’m an exceptional programmer, enthusiastic teacher, and most of all a team player. 
-          I’m a recent college grad out of the University of Oregon and one of the founders of Inquire. 
-          I find joy in software engineering and exploring new places. I’ve never shied away from a challenge 
-          and am more than willing to learn from my mistakes. If you’re interested in getting to know me, then... */}
         </p>
         <p className="text" style={{marginTop: "0px"}}>
           Outside of software engineering, I love hiking and exploring new places. I've traveled all over the Pacific
@@ -34,7 +30,7 @@ const About = () => (
     </Top>
     <Skills>
       <SecondaryTitle className="title">Technical Skills</SecondaryTitle>
-      <SkillsDescription>The following percentages represent my confidence levels with each language I've worked with.</SkillsDescription>
+      <SkillsDescription className="text">The following percentages represent my confidence levels with each language I've worked with.</SkillsDescription>
       <Progress>
         <ProgressBar percent={"95"} label={"Python"}  />
         <ProgressBar percent={"90"} label={"React"} bluePath />
@@ -65,16 +61,44 @@ const AboutSection = styled.section`
 const Top = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 1554px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-const Picture = styled.img``;
+const Picture = styled.img`
+  @media (max-width: 1554px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @media (max-width: 740px) {
+    width: 350px;
+    height: 350px;
+  }
+`;
 
 const DescriptionDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem;
+  margin-left: 3rem;
+
+  @media (max-width: 1554px) {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  @media (max-width: 740px) {
+    margin-left: 0px;
+    margin-top: 1rem;
+    text-align: center;
+  }
 `;
 
 const Skills = styled.div`
@@ -87,6 +111,14 @@ const Skills = styled.div`
 
 const SecondaryTitle = styled.h2`
   font-size: 45px;
+
+  @media (min-width: 741px) and (max-width: 1800px) {
+    font-size: 33px;
+  }
+
+  @media (max-width: 740px) {
+    font-size: 20px;
+  }
 `;
 
 const Progress = styled.div`
@@ -97,5 +129,4 @@ const Progress = styled.div`
 
 const SkillsDescription = styled.p`
   padding-bottom: 20px;
-  font-size: 25px;
 `;

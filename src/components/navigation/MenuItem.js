@@ -28,6 +28,8 @@ const MenuItem = ({ img, label, to, color, blank }) => {
 export default MenuItem;
 
 const Item = styled.li`
+  display: flex;
+  align-items: center;
   list-style-type: none;
   text-align: center;
   margin: 12px 6px;
@@ -40,6 +42,11 @@ const Item = styled.li`
 const Icon = styled.img`
   height: 40px;
   width: 40px;
+
+  @media (min-width: 741px) and (max-width: 1500px) {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 const Label = styled.p`
@@ -48,4 +55,8 @@ const Label = styled.p`
   font-weight: bold;
   margin: 0 10px;
   text-decoration: none;
+
+  @media (min-width: 741px) and (max-width: 1500px) {
+    font-size: 15px;
+  }
 `;

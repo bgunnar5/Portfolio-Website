@@ -100,6 +100,11 @@ const Wrapper = styled.ul`
 const Signature = styled.img`
   margin: 12px 6px;
 
+  @media (min-width: 741px) and (max-width: 1500px) {
+    height: 60px;
+    width: 80px;
+  }
+
   @media (max-width: 740px) {
     height: 50px;
     width: 70px;
@@ -129,16 +134,7 @@ const Icon = styled.img`
   }
 `;
 
-const Links = styled.div`
-    display: ${(props) => props.display ? "flex" : "none"};
-    flex-direction: column;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-`;
-
 const MobileWrapper = styled.div`
   display: flex;
-  /* flex-direction: column; */
   border-bottom: solid 1px;
 `;

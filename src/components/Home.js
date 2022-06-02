@@ -28,6 +28,10 @@ const Intro = styled.h3`
   font-size: 35px;
   margin: 3px;
 
+  @media (min-width: 741px) and (max-width: 1500px) {
+    font-size: 27px;
+  }
+
   @media (max-width: 740px) {
     font-size: 20px;
     margin: auto;
@@ -37,6 +41,10 @@ const Intro = styled.h3`
 const Name = styled.h1`
   font-size: 70px;
   margin: 10px 0;
+
+  @media (min-width: 741px) and (max-width: 1500px) {
+    font-size: 52px;
+  }
 
   @media (max-width: 740px) {
     font-size: 35px;
@@ -49,6 +57,11 @@ const Description = styled.p`
 `;
 
 const Picture = styled.img`
+  @media (min-width: 741px) and (max-width: 1500px) {
+    height: 300px;
+    width: 300px;
+  }
+
   @media (max-width: 740px) {
     height: 200px;
     width: 200px;

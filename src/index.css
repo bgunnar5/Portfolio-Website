@@ -29,14 +29,14 @@ code {
 }
 
 .left-padding {
-  padding-right: 5px;
+  padding-right: 10px;
   padding-left: 140px;
   /* padding: 80px 5px 25px 140px; */
 }
 
 .right-padding{
   padding-right: 140px;
-  padding-left: 5px;
+  padding-left: 10px;
   /* padding: 80px 140px 25px 5px; */
 }
 
@@ -58,17 +58,39 @@ a:visited {
   text-decoration: none;
 }
 
+@media (min-width: 741px) and (max-width: 1500px) {
+  .right-padding {
+    padding-right: 70px;
+  }
+
+  .left-padding {
+    padding-left: 70px;
+  }
+
+  .text {
+    font-size: 23px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .section {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    max-width: 1100px;
+  }
+}
+
 @media (max-width: 740px) {
   .right-padding {
     padding-right: 0px;
     padding-left: 0px;
-  /* padding: 80px 50px 25px 5px; */
   }
 
   .left-padding {
     padding-right: 0px;
     padding-left: 0px;
-    /* padding: 80px 5px 25px 50px; */
   }
 
   .text {
@@ -76,8 +98,12 @@ a:visited {
   }
 
   .title {
-    color: #ffffff;
     font-size: 30px;
-    margin: 3px;
+  }
+
+  .section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 540px;
   }
 }

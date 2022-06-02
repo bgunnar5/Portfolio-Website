@@ -28,8 +28,6 @@ const MenuItem = ({ img, label, to, color, blank }) => {
 export default MenuItem;
 
 const Item = styled.li`
-  display: flex;
-  align-items: center;
   list-style-type: none;
   text-align: center;
   margin: 12px 6px;

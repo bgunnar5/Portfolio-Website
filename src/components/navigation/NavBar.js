@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import MenuItem from "./MenuItem";
 import AboutImg from "../../imgs/about.svg";
@@ -9,9 +9,22 @@ import ResumeImg from "../../imgs/resume.svg";
 import SignatureImg from "../../imgs/website-signature.svg";
 import { HashLink } from "react-router-hash-link";
 import PDF from "../../static/brian-gunnarson-resume.pdf";
+import HamburgerIcon from "../../imgs/hamburger-menu.svg";
+import MobileLinks from "./MobileLinks";
+import UseWindowDims from "../common/UseWindowDims";
 
 const NavBar = () => {
+  const [display, toggleDisplay] = useState(false);
+  const {width, height} = UseWindowDims();
+
+  useEffect(() => {
+    if (width >= 740) {
+      toggleDisplay(false);
+    }
+  }, [width])
+  
   return (
+    <NavWrapper display={display}>
       <Nav>
         <Wrapper>
           <HashLink to="#home" smooth>
@@ -49,34 +62,83 @@ const NavBar = () => {
           </MenuButtons>
         </Wrapper>
       </Nav>
+      <MobileSection>
+        <MobileWrapper>
+          <HashLink to="#home" smooth style={{paddingLeft: "20px"}}>
+            <Signature src={SignatureImg} />
+          </HashLink>
+          <MenuButtons style={{paddingRight: "20px"}}>
+            <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} />
+          </MenuButtons>
+        </MobileWrapper>
+        <MobileLinks links={[{"label": "About", "to": "#about"}, {"label": "Experience", "to": "#experience"}, {"label": "Contact", "to": "#contact"}, {"label": "Resume", "to": PDF, "target": true}]} display={display} toggleDisplay={toggleDisplay} />
+      </MobileSection>
+    </NavWrapper>
   );
 };
 
 export default NavBar;
 
+const NavWrapper = styled.div`
+  border-bottom: ${(props) => props.display ? "none" : "solid 1px"};
+  background-color: #212121;
+  width: 100%;
+  position: fixed;
+`;
+
+const Nav = styled.nav`
+  @media (max-width: 740px) {
+    display: none;
+  }
+`;
+
 const Wrapper = styled.ul`
-  /* small change */
   display: flex;
   margin: auto;
 `;
 
-const Nav = styled.nav`
-  border-bottom: solid 1px;
-  background-color: #212121;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  /* height: 104px; */
-`;
-
 const Signature = styled.img`
   margin: 12px 6px;
-  height: 80px;
-  width: 120px;
+
+  @media (max-width: 740px) {
+    height: 50px;
+    width: 70px;
+  }
 `;
 
 const MenuButtons = styled.div`
   display: flex;
   margin-left: auto;
-  margin-right: 1rem;
+`;
+
+const MobileSection = styled.div`
+  display: none;
+
+  @media (max-width: 740px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Icon = styled.img`
+  height: 50px;
+  width: 50px;
+  margin: 12px 6px;
+  &:hover {
+      cursor: pointer;
+  }
+`;
+
+const Links = styled.div`
+    display: ${(props) => props.display ? "flex" : "none"};
+    flex-direction: column;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+`;
+
+const MobileWrapper = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  border-bottom: solid 1px;
 `;

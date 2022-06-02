@@ -27,12 +27,20 @@ const Intro = styled.h3`
   color: #7bafd4;
   font-size: 35px;
   margin: 3px;
+
+  @media (max-width: 740px) {
+    font-size: 20px;
+  }
 `;
 
 const Name = styled.h1`
-  color: #ffffff;
   font-size: 70px;
   margin: 10px 0;
+
+  @media (max-width: 740px) {
+    font-size: 35px;
+    margin: 10px 0;
+  }
 `;
 
 const Description = styled.p`
@@ -40,6 +48,10 @@ const Description = styled.p`
 `;
 
 const Picture = styled.img`
+@media (max-width: 740px) {
+  height: 200px;
+  width: 200px;
+}
 `;
 
 const TextWrapper = styled.div`

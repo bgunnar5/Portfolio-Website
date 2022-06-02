@@ -30,6 +30,7 @@ const Intro = styled.h3`
 
   @media (max-width: 740px) {
     font-size: 20px;
+    margin: auto;
   }
 `;
 
@@ -39,7 +40,7 @@ const Name = styled.h1`
 
   @media (max-width: 740px) {
     font-size: 35px;
-    margin: 10px 0;
+    margin: auto;
   }
 `;
 
@@ -48,15 +49,20 @@ const Description = styled.p`
 `;
 
 const Picture = styled.img`
-@media (max-width: 740px) {
-  height: 200px;
-  width: 200px;
-}
+  @media (max-width: 740px) {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 10px;
+  }
 `;
 
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 740px) {
+    text-align: center;
+  }
 `;
 
 const HomeSection = styled.section`
@@ -65,5 +71,8 @@ const HomeSection = styled.section`
   align-items: center;
   margin: auto;
   min-height: 100vh;
-  /* max-width: 2000px; */
+
+  @media (max-width: 740px) {
+    flex-direction: column-reverse;
+  }
 `;

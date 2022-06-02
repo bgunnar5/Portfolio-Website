@@ -29,11 +29,15 @@ code {
 }
 
 .left-padding {
-  padding: 80px 5px 25px 140px;
+  padding-right: 5px;
+  padding-left: 140px;
+  /* padding: 80px 5px 25px 140px; */
 }
 
 .right-padding{
-  padding: 80px 140px 25px 5px;
+  padding-right: 140px;
+  padding-left: 5px;
+  /* padding: 80px 140px 25px 5px; */
 }
 
 
@@ -56,11 +60,15 @@ a:visited {
 
 @media (max-width: 740px) {
   .right-padding {
-  padding: 80px 50px 25px 5px;
+    padding-right: 0px;
+    padding-left: 0px;
+  /* padding: 80px 50px 25px 5px; */
   }
 
   .left-padding {
-    padding: 80px 5px 25px 50px;
+    padding-right: 0px;
+    padding-left: 0px;
+    /* padding: 80px 5px 25px 50px; */
   }
 
   .text {

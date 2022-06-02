@@ -84,6 +84,7 @@ const NavWrapper = styled.div`
   background-color: #212121;
   width: 100%;
   position: fixed;
+  z-index: 2;
 `;
 
 const Nav = styled.nav`

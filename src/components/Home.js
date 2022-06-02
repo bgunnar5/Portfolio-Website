@@ -28,7 +28,7 @@ const Intro = styled.h3`
   font-size: 35px;
   margin: 3px;
 
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     font-size: 27px;
   }
 
@@ -42,7 +42,7 @@ const Name = styled.h1`
   font-size: 70px;
   margin: 10px 0;
 
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     font-size: 52px;
   }
 
@@ -57,7 +57,7 @@ const Description = styled.p`
 `;
 
 const Picture = styled.img`
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     height: 300px;
     width: 300px;
   }
@@ -82,7 +82,6 @@ const HomeSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   min-height: 100vh;
 
   @media (max-width: 740px) {

@@ -44,8 +44,9 @@ code {
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
+  /* margin: auto might be the cause of the weird shift to the left of everything in the console editor*/
   margin: auto;
-  max-width: 2124px;
+  max-width: 85%;
 }
 
 a:link {
@@ -58,7 +59,7 @@ a:visited {
   text-decoration: none;
 }
 
-@media (min-width: 741px) and (max-width: 1500px) {
+@media (min-width: 741px) and (max-width: 1800px) {
   .right-padding {
     padding-right: 70px;
   }
@@ -78,7 +79,7 @@ a:visited {
   .section {
     padding-top: 37px;
     padding-bottom: 37px;
-    max-width: 1100px;
+    /* max-width: 1100px; */
   }
 }
 
@@ -104,6 +105,6 @@ a:visited {
   .section {
     padding-top: 25px;
     padding-bottom: 25px;
-    max-width: 540px;
+    /* max-width: 540px; */
   }
 }

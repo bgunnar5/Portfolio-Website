@@ -43,7 +43,7 @@ const Icon = styled.img`
   height: 40px;
   width: 40px;
 
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     height: 30px;
     width: 30px;
   }
@@ -56,7 +56,7 @@ const Label = styled.p`
   margin: 0 10px;
   text-decoration: none;
 
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     font-size: 15px;
   }
 `;

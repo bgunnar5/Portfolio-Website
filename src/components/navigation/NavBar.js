@@ -100,7 +100,7 @@ const Wrapper = styled.ul`
 const Signature = styled.img`
   margin: 12px 6px;
 
-  @media (min-width: 741px) and (max-width: 1500px) {
+  @media (min-width: 741px) and (max-width: 1800px) {
     height: 60px;
     width: 80px;
   }

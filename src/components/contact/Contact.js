@@ -10,10 +10,10 @@ import PhoneIcon from "../../imgs/phone-icon.svg";
 const Contact = () => (
   <ContactSection className="section" id="contact">
     <h1 className="title">Contact</h1>
-    <p className="text">Thanks for viewing my website! Feel free to reach out to me by email if you want to get in touch.</p>
+    <Description className="text">Thanks for viewing my website! Email is the best way to get ahold of me if you want to get in touch.</Description>
     <CardSection>
-      <ContactCard img ={PhoneIcon} alt="Phone Icon" contactType="Phone" link="tel:5412288020" />
       <ContactCard img={GmailLogo} alt="Gmail Logo" contactType="Email" link="mailto:brianfunnarson14@gmail.com" />
+      <ContactCard img ={PhoneIcon} alt="Phone Icon" contactType="Phone" link="tel:5412288020" />
       <ContactCard img={LinkedInLogo} alt="LinkedIn Logo" contactType="LinkedIn" link="https://www.linkedin.com/in/brian-gunnarson-7736701a2/"/>
       <ContactCard img={GitHubLogo} alt="GitHub Logo" contactType="GitHub" link="https://github.com/bgunnar5"/>
       <ContactCard img={InstagramLogo} alt="Instagram Logo" contactType="Instagram" link="https://www.instagram.com/mr_funnarson"/>
@@ -49,8 +49,22 @@ const CopyrightSection = styled.div`
 
 const CopyrightNotice = styled.p`
   margin-bottom: 2px;
+
+  @media (max-width: 740px) {
+    font-size: 15px;
+  }
 `;
 
 const AuthorsNote = styled.p`
   margin-top: 2px;
+
+  @media (max-width: 740px) {
+    font-size: 15px;
+  }
+`;
+
+const Description = styled.p`
+  @media (max-width: 740px) {
+    text-align: center;
+  }
 `;

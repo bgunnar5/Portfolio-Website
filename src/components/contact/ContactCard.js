@@ -33,14 +33,38 @@ const CardWrapper = styled.a`
           background-color: #292929;
           box-shadow: 0px 0px 15px white;
     }
+
+    @media (min-width: 741px) and (max-width: 1800px) {
+        width: 250px;
+        height: 250px;
+    }
+
+    @media (max-width: 740px) {
+        width: 150px;
+        height: 150px;
+    }
 `;
 
 const Logo = styled.img`
     height: 80px;
     width: 80px;
+
+    @media (min-width: 741px) and (max-width: 1800px) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @media (max-width: 740px) {
+        height: 60px;
+        width: 60px;
+    }
 `;
 
 const Description = styled.p`
     color: white;
     font-size: 20px;
+
+    @media (max-width: 740px) {
+        font-size: 15px;
+    }
 `;

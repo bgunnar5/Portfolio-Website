@@ -12,7 +12,6 @@ import PDF from "../../static/brian-gunnarson-resume.pdf";
 import HamburgerIcon from "../../imgs/hamburger-menu.svg";
 import MobileLinks from "./MobileLinks";
 import UseWindowDims from "../common/UseWindowDims";
-import ClickAway from "../common/ClickAway";
 
 const NavBar = () => {
   const [display, toggleDisplay] = useState(false);
@@ -70,7 +69,6 @@ const NavBar = () => {
           </HashLink>
           <MenuButtons style={{paddingRight: "20px"}}>
             {display ? <CloseIcon onClick={() => {toggleDisplay(!display)}} >X</CloseIcon> : <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} />}
-            {/* <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} /> */}
           </MenuButtons>
         </MobileWrapper>
           <MobileLinks links={[{"label": "About", "to": "#about"}, {"label": "Experience", "to": "#experience"}, {"label": "Education", "to": "#education"}, {"label": "Contact", "to": "#contact"}, {"label": "Resume", "to": PDF, "target": true}]} display={display} toggleDisplay={toggleDisplay} />

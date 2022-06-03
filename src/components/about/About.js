@@ -30,7 +30,7 @@ const About = () => (
     </Top>
     <Skills>
       <h2 className="secondary-title">Technical Skills</h2>
-      <SkillsDescription className="text">The following percentages represent my confidence levels with each language I've worked with.</SkillsDescription>
+      <SkillsDescription className="text">The following percentages represent my confidence levels with each language/framework I've worked with.</SkillsDescription>
       <Progress>
         <ProgressBar percent={"95"} label={"Python"}  />
         <ProgressBar percent={"90"} label={"React"} bluePath />

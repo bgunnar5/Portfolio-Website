@@ -20,7 +20,7 @@ const Contact = () => (
     </CardSection>
     <CopyrightSection>
       <CopyrightNotice>Copyright© 2022 Brian Gunnarson</CopyrightNotice>
-      <AuthorsNote>View this website on <a href="https://github.com/bgunnar5/Portfolio-Website" target="_blank">GitHub</a></AuthorsNote>
+      <AuthorsNote>View this website on <a href="https://github.com/bgunnar5/Portfolio-Website" target="_blank" rel="noreferrer">GitHub</a></AuthorsNote>
     </CopyrightSection>
   </ContactSection>
 );

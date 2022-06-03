@@ -95,7 +95,7 @@ const Experience = () => {
         type="School Project"
         title="Software Engineer"
         dates="May 2021"
-        description="Using OpenGL for just my second time ever, I was assigned to create a model of a dog. It was required that one part of the dog moved so I made the tail wag and the eyes move up and down. Once ran this script
+        description="Using OpenGL for just my second time ever, I had to create a model of a dog. It was required that one part of the dog moved, so I made the tail wag and the eyes move up and down. Once ran this script
          will generate a video that continuously rotates around a dog, butterfly, bone, and food bowl. This project was done using C++ and OpenGL."
         bullets={["Organized architecture of the project by splitting parts of the dog into different functions", "Created every part of the model by translating, scaling, and rotating matrices"]}
         links={[{"link": "https://www.youtube.com/shorts/L7rxXcigf_Q", "message": "View on YouTube"}, {"link": "https://github.com/bgunnar5/Computer-Graphics/tree/master/dog_OpenGL/src", "message": "Open in GitHub"}]}
@@ -108,7 +108,7 @@ const Experience = () => {
         title="Software Engineer"
         dates="Apr. 2022 - Mar. 2022"
         description="Given an asteroid data set my job was to create a script to visualize the data using volume rendering. During this process I attempted to provide some optimizations like adding early ray termination. Along with 
-        the script and image that the script generates, I also wrote up an analysis on the efficacy of early ray termination. This project was done using C++ and VTK."
+        the script and image that the script generates, I also wrote up an analysis on the performance impacts of utilizing early ray termination. This project was done using C++ and VTK."
         bullets={["Read in data using VTK", "Determined how to color each pixel using ray casting", "Composited samples with the help of a transfer function", 
         "Analyzed various run times of generating low and high resolution images to determine the efficacy of early ray termination"]}
         links={[{"link": "https://github.com/bgunnar5/Scientific-Visualization/tree/master/astro", "message": "Open in GitHub"}]}
@@ -124,6 +124,5 @@ const ExperienceSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  /* min-height: 100vh; */
   padding-top: 25px;
 `;

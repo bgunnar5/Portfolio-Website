@@ -12,6 +12,7 @@ import PDF from "../../static/brian-gunnarson-resume.pdf";
 import HamburgerIcon from "../../imgs/hamburger-menu.svg";
 import MobileLinks from "./MobileLinks";
 import UseWindowDims from "../common/UseWindowDims";
+import ClickAway from "../common/ClickAway";
 
 const NavBar = () => {
   const [display, toggleDisplay] = useState(false);
@@ -42,11 +43,11 @@ const NavBar = () => {
               label="Experience"
               img={ExperienceImg}
             />
-            {/* <MenuItem
+            <MenuItem
               to="#education"
               label="Education"
               img={EducationImg}
-            /> */}
+            />
             <MenuItem
               to="#contact"
               label="Contact"
@@ -68,10 +69,11 @@ const NavBar = () => {
             <Signature src={SignatureImg} />
           </HashLink>
           <MenuButtons style={{paddingRight: "20px"}}>
-            <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} />
+            {display ? <CloseIcon onClick={() => {toggleDisplay(!display)}} >X</CloseIcon> : <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} />}
+            {/* <Icon src={HamburgerIcon} alt="hamburger menu icon" onClick={() => {toggleDisplay(!display)}} /> */}
           </MenuButtons>
         </MobileWrapper>
-        <MobileLinks links={[{"label": "About", "to": "#about"}, {"label": "Experience", "to": "#experience"}, {"label": "Contact", "to": "#contact"}, {"label": "Resume", "to": PDF, "target": true}]} display={display} toggleDisplay={toggleDisplay} />
+          <MobileLinks links={[{"label": "About", "to": "#about"}, {"label": "Experience", "to": "#experience"}, {"label": "Education", "to": "#education"}, {"label": "Contact", "to": "#contact"}, {"label": "Resume", "to": PDF, "target": true}]} display={display} toggleDisplay={toggleDisplay} />
       </MobileSection>
     </NavWrapper>
   );
@@ -115,6 +117,7 @@ const Signature = styled.img`
 const MenuButtons = styled.div`
   display: flex;
   margin-left: auto;
+  align-items: center;
 `;
 
 const MobileSection = styled.div`
@@ -138,4 +141,15 @@ const Icon = styled.img`
 const MobileWrapper = styled.div`
   display: flex;
   border-bottom: solid 1px;
+`;
+
+const CloseIcon = styled.p`
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 12px 6px;
+  padding-right: 10px;
+  &:hover {
+      cursor: pointer;
+  }
 `;

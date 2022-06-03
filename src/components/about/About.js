@@ -19,7 +19,7 @@ const About = () => (
         </p>
         <p className="text" style={{marginTop: "0px"}}>
           Outside of software engineering, I love hiking and exploring new places. I've traveled all over the Pacific
-          Northwest visiting various hiking trails, beaches, and mountains. The picture on the left is from a trip I
+          Northwest visiting various hiking trails, beaches, and mountains. This picture is from a trip I
           took to Blue Pool in Oregon. If you're interested in getting to know me more or have any suggestions on places
           I should visit, then...
         </p>
@@ -29,7 +29,7 @@ const About = () => (
       </DescriptionDiv>
     </Top>
     <Skills>
-      <SecondaryTitle className="title">Technical Skills</SecondaryTitle>
+      <h2 className="secondary-title">Technical Skills</h2>
       <SkillsDescription className="text">The following percentages represent my confidence levels with each language I've worked with.</SkillsDescription>
       <Progress>
         <ProgressBar percent={"95"} label={"Python"}  />
@@ -55,7 +55,7 @@ const AboutSection = styled.section`
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  padding-top: 0px;
+  padding-top: 10px;
 `;
 
 const Top = styled.div`
@@ -107,18 +107,6 @@ const Skills = styled.div`
   text-align: center;
   width: 80%;
   margin-top: 5rem;
-`;
-
-const SecondaryTitle = styled.h2`
-  font-size: 45px;
-
-  @media (min-width: 741px) and (max-width: 1800px) {
-    font-size: 33px;
-  }
-
-  @media (max-width: 740px) {
-    font-size: 20px;
-  }
 `;
 
 const Progress = styled.div`

@@ -5,7 +5,7 @@
     <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 </p>
 
-## [Click me to view site!](https://briangunnarson.com)
+## [Click me to view the site!](https://briangunnarson.com)
 
 ---
 

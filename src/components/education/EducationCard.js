@@ -57,8 +57,8 @@ const CardWrapper = styled.div`
   }
 
   @media (max-width: 740px) {
-      width: 400px;
-      height: 250px;
+      width: 350px;
+      height: 225px;
   }
 `;
 
@@ -74,8 +74,8 @@ const UOLogo = styled.img`
   margin-top: 10px;
 
   @media (max-width: 740px) {
-      width: 75px;
-      height: 75px;
+      width: 65px;
+      height: 65px;
   }
 `;
 
@@ -96,7 +96,7 @@ const UniversityName = styled.h2`
   padding-bottom: 5px;
 
   @media (max-width: 740px) {
-      font-size: 20px;
+      font-size: 18px;
       padding-bottom: 0px;
   }
 `;
@@ -108,7 +108,7 @@ const Dates = styled.p`
   color: white;
 
   @media (max-width: 740px) {
-      font-size: 17px;
+      font-size: 15px;
   }
 `;
 

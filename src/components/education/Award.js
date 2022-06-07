@@ -39,9 +39,28 @@ const MedalIcon = styled.img`
     margin-top: -50px;
     z-index: 1;
 
-    @media (max-width: 740px) {
+    @media (min-width: 741px) and (max-width: 1800px) {
         width: 250px;
         height: 250px;
+        ${(props) => !props.reverse && css`
+        margin-right: -125px;
+        `}
+
+        ${(props) => props.reverse && css`
+            margin-left: -125px;
+        `}
+    }
+
+    @media (max-width: 740px) {
+        width: 150px;
+        height: 150px;
+        ${(props) => !props.reverse && css`
+        margin-right: -75px;
+        `}
+
+        ${(props) => props.reverse && css`
+            margin-left: -75px;
+        `}
     }
 `;
 
@@ -55,6 +74,16 @@ const Rectangle = styled.div`
     max-width: 800px;
     padding-left: ${(props) => props.reverse ? "30px" : "150px"};
     padding-right: ${(props) => props.reverse ? "150px" : "30px"};
+
+    @media (min-width: 741px) and (max-width: 1800px) {
+        padding-left: ${(props) => props.reverse ? "20px" : "105px"};
+        padding-right: ${(props) => props.reverse ? "105px" : "20px"};
+    }
+
+    @media (max-width: 740px) {
+        padding-left: ${(props) => props.reverse ? "10px" : "60px"};
+        padding-right: ${(props) => props.reverse ? "60px" : "10px"};
+    }
 `;
 
 const TextWrapper = styled.div`

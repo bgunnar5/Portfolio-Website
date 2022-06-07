@@ -35,13 +35,13 @@ const CardWrapper = styled.a`
     }
 
     @media (min-width: 741px) and (max-width: 1800px) {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
     @media (max-width: 740px) {
-        width: 150px;
-        height: 150px;
+        width: 45px;
+        height: 45px;
     }
 `;
 
@@ -55,8 +55,8 @@ const Logo = styled.img`
     }
 
     @media (max-width: 740px) {
-        height: 60px;
-        width: 60px;
+        height: 35px;
+        width: 35px;
     }
 `;
 
@@ -65,6 +65,8 @@ const Description = styled.p`
     font-size: 20px;
 
     @media (max-width: 740px) {
-        font-size: 15px;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 0px;
     }
 `;

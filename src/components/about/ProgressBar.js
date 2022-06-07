@@ -35,7 +35,7 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 740px) {
-        width: 150px;
+        width: 100px;
     }
 `; 
 

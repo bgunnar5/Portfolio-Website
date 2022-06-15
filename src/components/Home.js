@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProfilePic from "../imgs/profile-pic-home.svg";
+import HomeImg from "../imgs/home-img.svg";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
             software development.
           </Description>
         </TextWrapper>
-        <Picture src={ProfilePic} className="right-padding"></Picture>
+        <Picture src={HomeImg} className="right-padding"></Picture>
       </HomeSection>
     </>
   );
@@ -57,6 +57,9 @@ const Description = styled.p`
 `;
 
 const Picture = styled.img`
+  height: 420px;
+  width: 420px;
+
   @media (min-width: 741px) and (max-width: 1800px) {
     height: 300px;
     width: 300px;

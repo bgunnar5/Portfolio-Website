@@ -25,14 +25,14 @@ const Education = () => (
          to the ground on Earth via electromagnetic transmission."
       />
       <Award 
-        award="Dean's List Honors x4" 
-        description="I've received Dean's List Honors from the University of Oregon four different times
-         (March 2018, December 2018, March 2019, and June 2019). This is awarded for having 4 classes and finishing with a 4.0 GPA or higher for the term."
+        award="Magna Cum Laude Honors" 
+        description="In 2022, after recieving my degree, the University of Oregon awarded me with Magna Cum Laude Honors for graduating in the top 5% of my class."
         reverse
       />
       <Award 
-        award="Magna Cum Laude Honors" 
-        description="In 2022, after recieving my degree, the University of Oregon awarded me with Magna Cum Laude Honors for graduating with a 3.9 or higher GPA."
+        award="Dean's List Honors x4" 
+        description="I've received Dean's List Honors from the University of Oregon four different times
+         (March 2018, December 2018, March 2019, and June 2019). This is awarded for having 4 classes and finishing with a 4.0 GPA or higher for the term."
       />
       <Award 
         award="Heart of Service Award" 

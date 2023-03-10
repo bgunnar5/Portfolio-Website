@@ -7,13 +7,57 @@ import ChartImg from "../../imgs/chart.svg";
 import DogIcon from "../../imgs/dog-icon.svg";
 import FirstAidIcon from "../../imgs/first-aid-icon.svg";
 import PlanetIcon from "../../imgs/planet-icon.svg";
+import LLNLLogo from "../../imgs/llnl-logo.svg";
 import Job from "./Job";
 
 const Experience = () => {
   return (
     <ExperienceSection className="section" id="experience">
       <h1 className="title" style={{ alignSelf: "center" }}>
-        Experience
+        Work Experience
+      </h1>
+
+      <Job
+        logo={LLNLLogo}
+        company="Lawrence Livermore National Laboratory (LLNL)"
+        type="Work Experience"
+        title="Software Engineer"
+        dates="Oct. 2022 - Present"
+        description="At LLNL I work for the WEAVE team on a project called Merlin. Merlin is a tool that makes it easy to build, run,
+         and process the kinds of large-scale HPC workflows needed for cognitive simulation. After taking over as the lead on Merlin I have
+         developed new features, fixed bugs, refactored code, improved the test suite, and provided user assistance when necessary."
+        bullets={[
+          "Research and develop tools for workflow integration on HPC systems",
+          "Design object oriented solutions to coding challenges in Python",
+          "Create automated unit and integration test suites",
+          "Provide support to users",
+        ]}
+        links={[
+          { link: "https://www.llnl.gov/", message: "LLNL's Website" },
+          {
+            link: "https://github.com/llnl/merlin",
+            message: "View Merlin in GitHub",
+          },
+        ]}
+        startOpen
+      />
+
+      <Job 
+      logo={UOLogo}
+      company="University of Oregon"
+      type="Work Experience"
+      title="Learning Assistant"
+      dates="Sep. 2020 - Mar. 2022"
+      description="At the University of Oregon, I helped instruct three introductory computer science classes: CIS 210, CIS 211, and CIS 212. 
+      The topics of these classes included programming basics (conditionals, loops, etc.), object oriented programming, and data structures."
+      bullets={["Helped teach Python and C basics, OOP, and data structures to students", "Increased my ability to review, understand, and develop code"]}
+      />
+
+      
+
+      <br></br>
+      <h1 className="title" style={{ alignSelf: "center" }}>
+        Projects
       </h1>
 
       <Job
@@ -38,17 +82,6 @@ const Experience = () => {
             message: "Open in GitHub",
           },
         ]}
-      />
-
-      <Job 
-      logo={UOLogo}
-      company="University of Oregon"
-      type="Work Experience"
-      title="Learning Assistant"
-      dates="Sep. 2020 - Mar. 2022"
-      description="At the University of Oregon, I helped instruct three introductory computer science classes: CIS 210, CIS 211, and CIS 212. 
-      The topics of these classes included programming basics (conditionals, loops, etc.), object oriented programming, and data structures."
-      bullets={["Helped teach Python and C basics, OOP, and data structures to students", "Increased my ability to review, understand, and develop code"]}
       />
 
       <Job 

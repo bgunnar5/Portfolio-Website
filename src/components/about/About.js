@@ -13,9 +13,10 @@ const About = () => (
       <DescriptionDiv className="right-padding">
         <h1 className="title">About Me</h1>
         <p className="text">
-          I'm a software engineer from Eugene, OR who enjoys problem solving, teaching, and learning. 
-          I have a Bachelor of Science in Computer Information Science from the University of Oregon and 
-          am one of the founders of Inquire: a website you can learn more about in the experience section below.
+          I'm a software engineer from Eugene, OR who enjoys problem solving, teaching, and learning.
+          I have a Bachelor of Science in Computer Information Science from the University of Oregon,
+          am one of the founders of Inquire (a website you can learn more about in the experience section below),
+          and currently work at LLNL on a workflow tool designed for high performance computing.
         </p>
         <p className="text" style={{marginTop: "0px"}}>
           Outside of software engineering, I love hiking and exploring new places. I've traveled all over the Pacific

@@ -15,7 +15,7 @@ import UseWindowDims from "../common/UseWindowDims";
 
 const NavBar = () => {
   const [display, toggleDisplay] = useState(false);
-  const {width, height} = UseWindowDims();
+  const {width,} = UseWindowDims();
 
   useEffect(() => {
     if (width >= 740) {

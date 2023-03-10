@@ -14,11 +14,13 @@ const Job = ({
   description,
   bullets,
   links,
+  startOpen=false
 }) => {
-  const [height, toggleHeight] = useState(0);
+  console.log("start open: " + startOpen)
+  const [height, toggleHeight] = useState((startOpen ? "auto" : 0));
 
   const handleHeightChange = (e) => {
-    var newHeight = (height === 0 ? "auto": 0);
+    var newHeight = (height === 0 ? "auto" : 0);
     toggleHeight(newHeight);
     e.stopPropagation()
   }

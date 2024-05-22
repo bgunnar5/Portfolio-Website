@@ -20,17 +20,21 @@ const Experience = () => {
       <Job
         logo={LLNLLogo}
         company="Lawrence Livermore National Laboratory (LLNL)"
-        type="Work Experience"
-        title="Software Engineer"
+        title="Software Engineer I-II"
         dates="Oct. 2022 - Present"
-        description="At LLNL I work for the WEAVE team on a project called Merlin. Merlin is a tool that makes it easy to build, run,
-         and process the kinds of large-scale HPC workflows needed for cognitive simulation. After taking over as the lead on Merlin I have
-         developed new features, fixed bugs, refactored code, improved the test suite, and provided user assistance when necessary."
+        description="At LLNL I work for the WEAVE team on two projects called Merlin and Sina.
+        Merlin is a tool that makes it easy to build, run, and process the kinds of large-scale HPC workflows needed
+        for cognitive simulation. After taking over as the lead on Merlin I have developed new features, fixed bugs,
+        refactored code, improved the test suite, and provided user assistance when necessary.
+        Sina is a tool that helps codes store, query, and visualize their data. My work on Sina revolves around 
+        integration into existing codes."
         bullets={[
+          "Lead developer on Merlin",
           "Research and develop tools for workflow integration on HPC systems",
-          "Design object oriented solutions to coding challenges in Python",
+          "Architect object oriented solutions in Python to massively parallel coding challenges",
           "Create automated unit and integration test suites",
-          "Provide support to users",
+          "Provide support to users in areas such as computational physics, COVID prevention, protein binding, and more.",
+          "Assist on code integration with Sina C++",
         ]}
         links={[
           { link: "https://www.llnl.gov/", message: "LLNL's Website" },
@@ -38,6 +42,10 @@ const Experience = () => {
             link: "https://github.com/llnl/merlin",
             message: "View Merlin in GitHub",
           },
+          {
+            link: "https://github.com/LLNL/Sina",
+            message: "View Sina in GitHub",
+          }
         ]}
         startOpen
       />
@@ -45,7 +53,6 @@ const Experience = () => {
       <Job 
       logo={UOLogo}
       company="University of Oregon"
-      type="Work Experience"
       title="Learning Assistant"
       dates="Sep. 2020 - Mar. 2022"
       description="At the University of Oregon, I helped instruct three introductory computer science classes: CIS 210, CIS 211, and CIS 212. 

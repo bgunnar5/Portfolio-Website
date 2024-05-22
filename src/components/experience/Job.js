@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ExternalLink from "../../imgs/external-link.svg";
 import UpArrow from "../../imgs/dropdown-up.svg";
 import DownArrow from "../../imgs/dropdown-down.svg";
@@ -32,8 +32,8 @@ const Job = ({
       >
         <Image src={logo} alt={company + " Logo"} />
         <CompanyContainer className="left-margin">
-          <CompanyName>{company}</CompanyName>
-          <CompanyType className="text">({type})</CompanyType>
+          <CompanyName type={type}>{company}</CompanyName>
+          {type ? <CompanyType className="text">({type})</CompanyType> : <></>}
         </CompanyContainer>
         {height === 0 ? (
           <DropArrow src={UpArrow} />
@@ -142,7 +142,9 @@ const DropArrow = styled.img`
 const CompanyName = styled.h2`
   color: white;
   font-size: 40px;
-  margin-bottom: 0px;
+  ${(props) => props.type && css`
+    margin-bottom: 0px;
+  `}
 
   @media (min-width: 741px) and (max-width: 1800px) {
     font-size: 30px;

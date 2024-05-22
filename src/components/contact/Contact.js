@@ -19,7 +19,7 @@ const Contact = () => (
       <ContactCard img={InstagramLogo} alt="Instagram Logo" contactType="Instagram" link="https://www.instagram.com/mr_funnarson"/>
     </CardSection>
     <CopyrightSection>
-      <CopyrightNotice>Copyright© 2022 Brian Gunnarson</CopyrightNotice>
+      <CopyrightNotice>Copyright© 2021-2024 Brian Gunnarson</CopyrightNotice>
       <AuthorsNote>View this website on <a href="https://github.com/bgunnar5/Portfolio-Website" target="_blank" rel="noreferrer">GitHub</a></AuthorsNote>
     </CopyrightSection>
   </ContactSection>

@@ -14,9 +14,9 @@ const About = () => (
         <h1 className="title">About Me</h1>
         <p className="text">
           I'm a software engineer from Eugene, OR who enjoys problem solving, teaching, and learning.
-          I have a Bachelor of Science in Computer Information Science from the University of Oregon,
-          am one of the founders of Inquire (a website you can learn more about in the experience section below),
-          and currently work at LLNL on a workflow tool designed for high performance computing.
+          I have a Bachelor of Science in Computer Information Science from the University of Oregon
+          and currently work at LLNL on both a workflow tool called Merlin designed for high performance
+          computing and a data management tool called Sina.
         </p>
         <p className="text" style={{marginTop: "0px"}}>
           Outside of software engineering, I love hiking and exploring new places. I've traveled all over the Pacific
@@ -33,7 +33,7 @@ const About = () => (
       <h2 className="secondary-title">Technical Skills</h2>
       <SkillsDescription className="text">The following percentages represent my confidence levels with each language/framework I've worked with.</SkillsDescription>
       <Progress>
-        <ProgressBar percent={"95"} label={"Python"}  />
+        <ProgressBar percent={"99"} label={"Python"}  />
         <ProgressBar percent={"90"} label={"React"} bluePath />
         <ProgressBar percent={"85"} label={"C++"} />
         <ProgressBar percent={"80"} label={"C"} bluePath />
@@ -42,7 +42,7 @@ const About = () => (
         <ProgressBar percent={"50"} label={"SQL"} />
         <ProgressBar percent={"90"} label={"HTML"} bluePath/>
         <ProgressBar percent={"70"} label={"CSS"} />
-        <ProgressBar percent={"90"} label={"Flask"} bluePath/>
+        <ProgressBar percent={"80"} label={"Flask"} bluePath/>
       </Progress>
     </Skills>
   </AboutSection>

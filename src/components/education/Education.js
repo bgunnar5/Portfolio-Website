@@ -18,6 +18,14 @@ const Education = () => (
       />
       <AwardTitle className="secondary-title">Awards</AwardTitle>
       <Award 
+        award="WSC/SD Silver Award" 
+        description="In 2024 I recieved a silver award from the WSC department at LLNL.
+        The WSC Silver Award is described as: 'Recognition and award for significant achievement or 
+        contribution that has an impact typically at the division or department level.'
+        This reward was granted for consistent and high-quality Merlin development resulting in a major new release."
+        reverse
+      />
+      <Award 
         award="Mercer Family Foundation Grant" 
         description="I received the Mercer Family Foundation Grant for my research
          in space-based solar energy conducted my sophomore year of college. This is a solar
